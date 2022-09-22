@@ -15,8 +15,11 @@ class HomePage extends StatelessWidget {
       title: "Centro Lui",
       actions: [
         IconButton(
+            onPressed: () => context.push(RoutingPath.profile),
+            icon: const Icon(Icons.person)),
+        IconButton(
             onPressed: () => context.push(RoutingPath.settings),
-            icon: const Icon(Icons.settings))
+            icon: const Icon(Icons.settings)),
       ],
       tabs: const [
         Tab(icon: Icon(Icons.directions_car)),

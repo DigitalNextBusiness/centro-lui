@@ -6,5 +6,6 @@ class RoutingPath {
   static const register = "register";
   static const forgotPassword = "forgot-passowrd";
 
+  static const profile = "/profile";
   static const settings = "/settings";
 }

@@ -12,11 +12,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     final GoRouter goRouter = Provider.of<AppRouter>(context).router;
 
-    // ClRouter router = ClRouter(auth);
     return MaterialApp.router(
       title: APP_NAME,
       routerConfig: goRouter,
-      // routerConfig: router,
       theme: Provider.of<ThemeService>(context).currentTheme,
     );
   }

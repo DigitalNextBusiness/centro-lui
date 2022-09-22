@@ -1,6 +1,7 @@
 import 'package:centrolui/router/cl_routing_path.dart';
 import 'package:centrolui/router/routing_groups/auth/auth_routes.dart';
 import 'package:centrolui/screens/Home/home_screen.dart';
+import 'package:centrolui/screens/Profile/profile.dart';
 import 'package:centrolui/screens/Settings/settings_screen.dart';
 import 'package:centrolui/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
@@ -25,9 +26,12 @@ class AppRouter {
         path: RoutingPath.settings,
         builder: (_, __) => const SettingScreen(),
       ),
+      GoRoute(
+        path: RoutingPath.profile,
+        builder: (_, __) => const ProfileScreen(),
+      ),
     ],
     redirect: (context, state) {
-      debugPrint(state.location);
       bool goingToAuthenticationRoutes = state.location == RoutingPath.auth ||
           state.location == "${RoutingPath.auth}/${RoutingPath.login}" ||
           state.location == "${RoutingPath.auth}/${RoutingPath.register}" ||

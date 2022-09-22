@@ -7,6 +7,7 @@ class AuthService extends ChangeNotifier {
   StreamController<User?> authStateChanges = StreamController.broadcast();
 
   User? _currentUser;
+  User? get userLogged => _currentUser;
 
   bool get isUserLogged => _currentUser != null;
 
