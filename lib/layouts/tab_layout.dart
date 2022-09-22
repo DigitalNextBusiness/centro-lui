@@ -6,18 +6,20 @@ class ClTabLayout extends StatelessWidget {
     required this.tabs,
     this.actions,
     required this.tabsContent,
+    required this.length,
     this.title,
   });
 
   final String? title;
   final List<Tab> tabs;
   final List<Widget>? actions;
+  final int length;
   final List<Widget> tabsContent;
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: length,
       child: Scaffold(
         appBar: AppBar(
           title: title != null ? Text(title!) : null,

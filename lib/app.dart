@@ -1,3 +1,4 @@
+import 'package:calendar_view/calendar_view.dart';
 import 'package:centrolui/costants/constants.dart';
 import 'package:centrolui/router/cl_router.dart';
 import 'package:centrolui/services/theme/theme_service.dart';
@@ -12,10 +13,13 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     final GoRouter goRouter = Provider.of<AppRouter>(context).router;
 
-    return MaterialApp.router(
-      title: APP_NAME,
-      routerConfig: goRouter,
-      theme: Provider.of<ThemeService>(context).currentTheme,
+    return CalendarControllerProvider(
+      controller: EventController(),
+      child: MaterialApp.router(
+        title: APP_NAME,
+        routerConfig: goRouter,
+        theme: Provider.of<ThemeService>(context).currentTheme,
+      ),
     );
   }
 }
