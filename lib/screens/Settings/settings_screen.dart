@@ -1,9 +1,7 @@
 import 'package:centrolui/layouts/clean_layout.dart';
-import 'package:centrolui/router/cl_routing_path.dart';
 import 'package:centrolui/services/auth/auth_service.dart';
 import 'package:centrolui/services/theme/theme_service.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 class SettingScreen extends StatelessWidget {
@@ -25,10 +23,7 @@ class SettingScreen extends StatelessWidget {
                   onChanged: (_) => theme.changeTheme),
             ),
             TextButton(
-              onPressed: () {
-                auth.logout();
-                context.go(RoutingPath.home);
-              },
+              onPressed: () => auth.logout(),
               child: const Text("Logout"),
             )
           ],

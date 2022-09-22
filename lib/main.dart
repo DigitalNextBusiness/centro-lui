@@ -1,6 +1,5 @@
 import 'package:centrolui/app.dart';
 import 'package:centrolui/router/cl_router.dart';
-import 'package:centrolui/services/app/app_service.dart';
 import 'package:centrolui/services/auth/auth_service.dart';
 import 'package:centrolui/services/theme/theme_service.dart';
 import 'package:flutter/material.dart';

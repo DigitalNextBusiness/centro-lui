@@ -11,27 +11,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return ClCleanLaout(
-    //   title: title,
-    //   body: Center(
-    //     child: ListView(
-    //       children: <Widget>[
-    //         const Text(
-    //           'You have pushed the button this many times:',
-    //         ),
-    //         Text(
-    //           "12",
-    //           style: Theme.of(context).textTheme.headline4,
-    //         ),
-    //       ],
-    //     ),
-    //   ),
-    //   floatingActionButton: FloatingActionButton(
-    //     onPressed: () => {debugPrint("Add")},
-    //     tooltip: 'Increment',
-    //     child: const Icon(Icons.add),
-    //   ),
-    // );
     return ClTabLayout(
       title: "Centro Lui",
       actions: [
